@@ -1,0 +1,14 @@
+def sort_by_total_score(students):
+    sorted_students = sorted(students, key=lambda x: sum(x[1]), reverse=True)
+    return sorted_students
+
+def main():
+    students = [("Alice", (85, 90, 95)),
+                ("Bob", (70, 80, 75)),
+                ("Charlie", (90, 85, 80))]
+    
+    sorted_students = sort_by_total_score(students)
+    print("Sorted list by total score (descending order):", sorted_students)
+
+if __name__ == "__main__":
+    main()
