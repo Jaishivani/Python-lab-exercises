@@ -1,0 +1,22 @@
+from collections import Counter
+from typing import List, Tuple
+
+def identify_trending_topics(comments: List[Tuple[str, int]], keywords: List[str]) -> List[str]:
+    keyword_counts = Counter()  # Counter to store the frequency counts of keywords
+
+    # Iterate through each comment and count the frequency of keywords
+    for comment, likes in comments:
+        for word in comment.lower().split():  # Convert comment text to lowercase and split into words
+            if word in keywords:
+                keyword_counts[word] += 1
+
+    # Sort keywords by their frequency counts in descending order
+    sorted_keywords = sorted(keyword_counts, key=lambda k: (-keyword_counts[k], k))
+
+    return sorted_keywords
+
+# Example usage:
+comments = [("Great post!", 10), ("I agree with you", 15), ("This is awesome", 20)]
+keywords = ["great", "awesome", "agree"]
+trending_topics = identify_trending_topics(comments, keywords)
+print("Top trending topics:", trending_topics)
