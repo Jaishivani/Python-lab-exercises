@@ -1,0 +1,24 @@
+def print_dictionary_as_table(dictionary):
+    # Determine the maximum length of keys and values
+    max_key_length = max(len(str(key)) for key in dictionary)
+    max_value_length = max(len(str(value)) for value in dictionary.values())
+
+    # Print the table header
+    print(f"+{'-' * (max_key_length + 2)}+{'-' * (max_value_length + 2)}+")
+    print(f"|{'Key':<{max_key_length}} | {'Value':<{max_value_length}}|")
+    print(f"+{'-' * (max_key_length + 2)}+{'-' * (max_value_length + 2)}+")
+
+    # Print each key-value pair in the dictionary
+    for key, value in dictionary.items():
+        print(f"|{str(key):<{max_key_length}} | {str(value):<{max_value_length}}|")
+
+    # Print the table footer
+    print(f"+{'-' * (max_key_length + 2)}+{'-' * (max_value_length + 2)}+")
+
+
+# Example dictionary
+my_dict = {"Name": "John", "Age": 30, "Country": "USA", "Occupation": "Engineer"}
+
+# Print the dictionary as a table
+print("Dictionary in table format:")
+print_dictionary_as_table(my_dict)
