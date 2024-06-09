@@ -1,0 +1,18 @@
+def spell_checker(document, valid_words):
+    misspelled_words = []
+    for word in document:
+        if word.lower() not in valid_words:
+            misspelled_words.append(word)
+    return misspelled_words
+
+# Sample dictionary of valid words
+valid_words = {'apple', 'banana', 'orange', 'grape'}
+
+# Sample document with words to be checked
+document = ['aple', 'banana', 'orange', 'bannana']
+
+# Check the spelling of words in the document
+misspelled_words = spell_checker(document, valid_words)
+
+# Print the misspelled words
+print("Misspelled words:", misspelled_words)
