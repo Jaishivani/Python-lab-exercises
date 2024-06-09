@@ -1,0 +1,22 @@
+def count_characters(input_str):
+    # Convert the input string to lowercase
+    input_str = input_str.lower()
+    
+    # Initialize an empty dictionary to store character counts
+    char_count = {}
+    
+    # Iterate through each character in the input string
+    for char in input_str:
+        # Increment the count of the current character in the dictionary
+        if char in char_count:
+            char_count[char] += 1
+        else:
+            char_count[char] = 1
+    
+    # Print the character counts
+    for char, count in char_count.items():
+        print(f"'{char}': {count}")
+
+# Example usage:
+input_string = "Hello World"
+count_characters(input_string)
