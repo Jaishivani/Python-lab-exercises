@@ -1,0 +1,7 @@
+balance = float(input("Enter account balance: "))
+withdrawal = float(input("Enter withdrawal amount: "))
+
+if withdrawal <= balance:
+    print("Transaction successful.")
+else:
+    print("Insufficient funds.")
