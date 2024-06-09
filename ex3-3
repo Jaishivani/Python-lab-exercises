@@ -1,0 +1,22 @@
+def second_largest_value(dictionary):
+    # Sort the values of the dictionary in descending order
+    sorted_values = sorted(dictionary.values(), reverse=True)
+    
+    # Return the second value in the sorted list
+    if len(sorted_values) > 1:
+        return sorted_values[1]
+    else:
+        return None  # Return None if the dictionary has less than two values
+
+
+# Example dictionary
+my_dict = {"a": 10, "b": 20, "c": 15, "d": 25, "e": 30}
+
+# Find the second largest value in the dictionary
+second_largest = second_largest_value(my_dict)
+
+# Print the result
+if second_largest is not None:
+    print("The second largest value in the dictionary is:", second_largest)
+else:
+    print("The dictionary does not have a second largest value.")
