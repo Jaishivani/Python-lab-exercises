@@ -1,0 +1,32 @@
+def check_product_availability(product_id, warehouses):
+    total_quantity = 0
+    for warehouse in warehouses:
+        for item_id, quantity in warehouse:
+            if item_id == product_id:
+                total_quantity += quantity
+                break  # Stop searching if the product is found in any warehouse
+    return total_quantity
+
+def main():
+    # Define three warehouses with product identifiers and quantities available
+    warehouse1 = [("P001", 50), ("P002", 30), ("P003", 20)]
+    warehouse2 = [("P002", 40), ("P004", 25), ("P005", 15)]
+    warehouse3 = [("P001", 20), ("P003", 10), ("P005", 35)]
+
+    # Combine the warehouses into a single list
+    warehouses = [warehouse1, warehouse2, warehouse3]
+
+    # Prompt the user to enter a product identifier
+    product_id = input("Enter the product identifier: ")
+
+    # Check if the product is available in any of the warehouses
+    total_quantity = check_product_availability(product_id, warehouses)
+
+    # Display the result
+    if total_quantity > 0:
+        print(f"The product {product_id} is available in total quantity: {total_quantity}")
+    else:
+        print("Sorry, the product is out of stock.")
+
+if __name__ == "__main__":
+    main()
