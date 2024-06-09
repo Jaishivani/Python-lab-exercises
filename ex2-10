@@ -1,0 +1,13 @@
+def get_first_half_of_months(months_tuple):
+    half_length = len(months_tuple) // 2
+    first_half_months = months_tuple[:half_length]
+    return first_half_months
+
+def main():
+    months = ("January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December")
+    
+    first_half_months = get_first_half_of_months(months)
+    print("Names of the first half of the months:", first_half_months)
+
+if __name__ == "__main__":
+    main()
