@@ -1,0 +1,38 @@
+def calculate_growth_rate(start_value, end_value, start_date, end_date):
+    time_period = (end_date - start_date).days
+    growth_rate = ((end_value - start_value) / start_value) / time_period
+    return growth_rate
+
+def main():
+    # Define performance data for three investment instruments (date, value)
+    instrument1_data = [(date, value) for date, value in zip(date_range, values1)]
+    instrument2_data = [(date, value) for date, value in zip(date_range, values2)]
+    instrument3_data = [(date, value) for date, value in zip(date_range, values3)]
+
+    # Prompt user for start and end dates for analysis period
+    start_date = input("Enter start date (YYYY-MM-DD): ")
+    end_date = input("Enter end date (YYYY-MM-DD): ")
+
+    # Convert user input to date objects (assuming dates are in the format "YYYY-MM-DD")
+    start_date = datetime.strptime(start_date, "%Y-%m-%d").date()
+    end_date = datetime.strptime(end_date, "%Y-%m-%d").date()
+
+    # Calculate growth rate for each instrument over the specified period
+    growth_rates = []
+    for instrument_data in [instrument1_data, instrument2_data, instrument3_data]:
+        start_value = next(value for date, value in instrument_data if date == start_date)
+        end_value = next(value for date, value in instrument_data if date == end_date)
+        growth_rate = calculate_growth_rate(start_value, end_value, start_date, end_date)
+        growth_rates.append(growth_rate)
+
+    # Determine which instrument has the highest growth rate
+    max_growth_rate = max(growth_rates)
+    instrument_names = ["Instrument 1", "Instrument 2", "Instrument 3"]
+    best_instrument_index = growth_rates.index(max_growth_rate)
+    best_instrument_name = instrument_names[best_instrument_index]
+
+    # Display the instrument with the highest growth rate
+    print(f"The investment instrument with the highest growth rate is {best_instrument_name} with a growth rate of {max_growth_rate:.2%}.")
+
+if __name__ == "__main__":
+    main()
