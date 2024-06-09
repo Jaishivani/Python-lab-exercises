@@ -1,0 +1,26 @@
+import string
+
+def count_word_frequency(input_str):
+    # Remove punctuation from the input string
+    translator = str.maketrans('', '', string.punctuation)
+    input_str = input_str.translate(translator)
+    
+    # Convert the input string to lowercase and split into words
+    words = input_str.lower().split()
+    
+    # Initialize an empty dictionary to store word frequencies
+    word_freq = {}
+    
+    # Count the frequency of each word
+    for word in words:
+        if word in word_freq:
+            word_freq[word] += 1
+        else:
+            word_freq[word] = 1
+    
+    # Return the dictionary with word frequencies
+    return word_freq
+
+# Example usage:
+input_string = "This is a sample string, a SAMPLE string to test the program."
+print(count_word_frequency(input_string))
