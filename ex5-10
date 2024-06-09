@@ -1,0 +1,8 @@
+    a = float(input("Enter the first number: "))
+    b = float(input("Enter the second number: "))
+    c = float(input("Enter the third number: "))
+    
+    numbers = [a, b, c]
+    numbers.sort()
+    
+    print("The numbers in ascending order are:", numbers)
