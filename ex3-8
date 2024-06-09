@@ -1,0 +1,17 @@
+def compare_dates(date1, date2):
+    if date1 < date2:
+        return "earlier"
+    elif date1 > date2:
+        return "later"
+    else:
+        return "the same as"
+
+def main():
+    date1 = (2023, 5, 10)
+    date2 = (2023, 5, 15)
+    
+    comparison = compare_dates(date1, date2)
+    print(f"The first date is {comparison} the second date.")
+
+if __name__ == "__main__":
+    main()
