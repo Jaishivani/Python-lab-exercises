@@ -1,0 +1,12 @@
+age = int(input("Enter age: "))
+gender = input("Enter gender (Male/Female): ").strip().lower()
+
+if gender == 'male':
+    max_hr = 220 - age
+else:
+    max_hr = 226 - age
+
+lower_range = int(max_hr * 0.5)
+upper_range = int(max_hr * 0.85)
+
+print(f"Recommended heart rate range: {lower_range} - {upper_range} bpm")
