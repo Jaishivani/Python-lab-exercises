@@ -1,0 +1,6 @@
+
+string = input("Enter a string: ")
+start_index = int(input("Enter the starting index: "))
+end_index = int(input("Enter the ending index: "))
+substring = string[start_index:end_index]
+print("Extracted substring:", substring)
