@@ -1,0 +1,20 @@
+def remove_duplicates(input_str):
+    # Initialize an empty dictionary to store unique characters
+    char_dict = {}
+    
+    # Initialize an empty string to store the result
+    result_str = ""
+    
+    # Iterate through each character in the input string
+    for char in input_str:
+        # If the character is not already in the dictionary, add it to the result string
+        if char not in char_dict:
+            char_dict[char] = True
+            result_str += char
+    
+    # Return the result string without duplicates
+    return result_str
+
+# Example usage:
+input_string = "hello"
+print(remove_duplicates(input_string))
