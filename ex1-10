@@ -1,0 +1,10 @@
+u=int(input('Enter a number:'))
+i=0
+j=1
+fib=[]
+for k in range(n):
+    fib.append(i)
+    c=i+j
+    i=j
+    j=c
+print('The fibonacci series is:',fib)
