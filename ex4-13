@@ -1,0 +1,22 @@
+def check_username(username):
+    # Check if the username is between 6 and 12 characters long
+    if len(username) < 6 or len(username) > 12:
+        return False
+    
+    # Check if the username contains only alphanumeric characters
+    if not username.isalnum():
+        return False
+    
+    # Check if the username starts with a letter
+    if not username[0].isalpha():
+        return False
+    
+    return True
+
+# Example usage:
+username = input("Enter a username: ")
+
+if check_username(username):
+    print("Username meets the criteria.")
+else:
+    print("Username does not meet the criteria.")
