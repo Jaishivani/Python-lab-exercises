@@ -1,0 +1,52 @@
+menu = {
+    "Burger": 10.00,
+    "Pizza": 15.00,
+    "Salad": 7.50,
+    "Soda": 2.00,
+    "Fries": 3.00
+}
+
+valid_addresses = ["Selam", "Erode"]
+
+def apply_discount(total):
+    if total > 100:
+        return total * 0.85
+    elif total > 50:
+        return total * 0.90
+    return total
+
+def validate_address(address):
+    return address in valid_addresses
+
+cart = {}
+while True:
+    item = input("Enter item to add to cart (or 'done' to finish): ").strip().capitalize()
+    if item == 'Done':
+        break
+    if item in menu:
+        quantity = int(input(f"Enter quantity of {item}: "))
+        if item in cart:
+            cart[item] += quantity
+        else:
+            cart[item] = quantity
+    else:
+        print("Item not found in menu.")
+
+total_amount = sum(menu[item] * quantity for item, quantity in cart.items())
+print(f"Total amount before discount: ${total_amount:.2f}")
+
+discounted_total = apply_discount(total_amount)
+print(f"Total amount after discount: ${discounted_total:.2f}")
+
+address = input("Enter delivery address (or 'pickup' for pickup): ").strip().capitalize()
+if address.lower() != 'Pickup':
+    if validate_address(address):
+        print("Delivery address is valid.")
+        print(f"Your order will be delivered to {address}.")
+    else:
+        print("Delivery address is outside our delivery radius.")
+        print("Please choose another address or opt for pickup.")
+else:
+    print("You have chosen to pick up your order.")
+
+print("Order placed successfully!")
