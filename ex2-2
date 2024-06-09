@@ -1,0 +1,21 @@
+def calculate_average_age(people):
+    total_age = 0
+    num_people = len(people)
+    
+    for person in people:
+        total_age += person[1]  # Assuming age is always the second element of each tuple
+    
+    if num_people > 0:
+        average_age = total_age / num_people
+        return average_age
+    else:
+        return 0  # Return 0 if the list is empty
+
+def main():
+    people = [("Alice", 25), ("Bob", 30), ("Charlie", 35)]  # Example list of tuples
+    
+    average_age = calculate_average_age(people)
+    print("Average age:", average_age)
+
+if __name__ == "__main__":
+    main()
