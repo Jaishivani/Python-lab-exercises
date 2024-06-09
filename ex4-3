@@ -1,0 +1,15 @@
+def reverse_string(input_str):
+    # Initialize an empty string to store the reversed string
+    reversed_str = ""
+    
+    # Iterate through the input string in reverse order
+    for i in range(len(input_str) - 1, -1, -1):
+        # Append each character to the reversed string
+        reversed_str += input_str[i]
+    
+    # Return the reversed string
+    return reversed_str
+
+# Example usage:
+input_string = "Hello World"
+print(reverse_string(input_string))
