@@ -1,0 +1,20 @@
+def check_room_availability(date, room_availability):
+    availability_for_date = {}
+    for room_type, availability in room_availability.items():
+        availability_for_date[room_type] = availability.get(date, 0)
+    return availability_for_date
+
+# Sample dictionary of room availability
+room_availability = {
+    'Standard': {'2024-04-12': 10, '2024-04-13': 5},
+    'Deluxe': {'2024-04-12': 5, '2024-04-13': 2}
+}
+
+# Sample date to check availability
+date_to_check = '2024-04-13'
+
+# Check room availability for the given date
+availability_for_date = check_room_availability(date_to_check, room_availability)
+
+# Print the room availability for the given date
+print(availability_for_date)
