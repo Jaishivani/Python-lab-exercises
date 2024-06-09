@@ -1,0 +1,14 @@
+def calculate_total_expenses(expenses):
+    total_expenses = {}
+    for category, amounts in expenses.items():
+        total_expenses[category] = sum(amounts)
+    return total_expenses
+
+# Sample dictionary of expenses
+expenses = {'Food': [100, 150], 'Transportation': [50, 75], 'Entertainment': [75, 100]}
+
+# Calculate the total expenses for each category
+total_expenses = calculate_total_expenses(expenses)
+
+# Print the total expenses
+print("Total Expenses:", total_expenses)
