@@ -1,0 +1,19 @@
+def count_votes():
+    num_candidates = int(input("Enter the number of candidates: "))
+    votes = {}
+
+    for i in range(1, num_candidates + 1):
+        candidate_name = input(f"Enter the name of candidate {i}: ")
+        num_votes = int(input(f"Enter the number of votes for {candidate_name}: "))
+        votes[candidate_name] = num_votes
+
+    return votes
+
+def display_results(votes):
+    print("Vote Counts:")
+    for candidate, count in votes.items():
+        print(f"{candidate}: {count}")
+
+# Main program
+votes = count_votes()
+display_results(votes)
