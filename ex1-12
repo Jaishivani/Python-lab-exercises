@@ -1,0 +1,13 @@
+def count(text):
+    words = text.split()
+    word_c = {}
+    for word in words:
+        if word in word_c:
+            word_c[word] += 1
+        else:
+            word_c[word] = 1
+return word_c
+u = "This is a sample string to test the program. This program counts the occurrences of each word."
+word_c = count(input_string)
+for word, count in word_c.items():
+    print(f"'{word}': {count}")
