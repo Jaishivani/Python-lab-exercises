@@ -1,0 +1,22 @@
+def translate_sentence(sentence, translations):
+    translated_words = []
+    words = sentence.split()
+    
+    for word in words:
+        translated_word = translations.get(word, word)  # If word not found in translations, return the original word
+        translated_words.append(translated_word)
+    
+    translated_sentence = ' '.join(translated_words)
+    return translated_sentence
+
+# Sample dictionary
+translations = {'hello': 'bonjour', 'world': 'monde'}
+
+# Sample English sentence
+english_sentence = "hello world"
+
+# Translate the sentence using the dictionary
+translated_sentence = translate_sentence(english_sentence, translations)
+
+# Print the translated sentence
+print("Translated Sentence:", translated_sentence)
