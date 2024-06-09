@@ -1,0 +1,5 @@
+temperature = float(input("Enter your temperature in Fahrenheit: "))
+    if temperature >= 100.4:
+        print("You have a fever.")
+    else:
+        print("You do not have a fever.")
