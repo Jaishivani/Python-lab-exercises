@@ -1,0 +1,12 @@
+def remove_duplicates(names):
+    unique_names = list(set(names))
+    return unique_names
+
+def main():
+    students = ["Alice", "Bob", "Alice", "Charlie", "Bob", "David"]
+    
+    unique_students = remove_duplicates(students)
+    print("Updated list without duplicates:", unique_students)
+
+if __name__ == "__main__":
+    main()
