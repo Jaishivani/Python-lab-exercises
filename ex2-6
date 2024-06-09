@@ -1,0 +1,14 @@
+def tuples_to_dictionary(people):
+    person_dict = {}
+    for name, age in people:
+        person_dict[name] = age
+    return person_dict
+
+def main():
+    people = [("Alice", 25), ("Bob", 30), ("Charlie", 35)]
+    
+    person_dict = tuples_to_dictionary(people)
+    print("Dictionary:", person_dict)
+
+if __name__ == "__main__":
+    main()
