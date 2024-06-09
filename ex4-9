@@ -1,0 +1,19 @@
+def is_pangram(input_str):
+    # Convert the input string to lowercase
+    input_str = input_str.lower()
+    
+    # Define the alphabet
+    alphabet = 'abcdefghijklmnopqrstuvwxyz'
+    
+    # Iterate through each letter in the alphabet
+    for char in alphabet:
+        # Check if the current letter is not present in the input string
+        if char not in input_str:
+            return False
+    
+    # If all letters are present in the input string, return True
+    return True
+
+# Example usage:
+input_string = "The quick brown fox jumps over the lazy dog"
+print(is_pangram(input_string))  # Output: True
