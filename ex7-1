@@ -1,0 +1,7 @@
+Function show_employee():
+
+def show_employee(name, salary=9000):
+    print(f"Employee: {name}, Salary: {salary}")
+
+show_employee("John", 5000)  # Output: Employee: John, Salary: 5000
+show_employee("Doe")  # Output: Employee: Doe, Salary: 9000
