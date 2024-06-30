@@ -1,0 +1,6 @@
+Function power():
+def power(base, exp=2):
+    return base ** exp
+
+print(power(3, 3))  # Output: 27
+print(power(4))  # Output: 16
