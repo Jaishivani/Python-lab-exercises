@@ -1,0 +1,8 @@
+Function func1():
+def func1(*args):
+    for arg in args:
+        print(arg)
+
+func1(1, 2, 3)  # Output: 1 2 3
+func1("a", "b", "c")  # Output: a b c
+
