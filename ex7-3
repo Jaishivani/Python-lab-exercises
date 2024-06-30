@@ -1,0 +1,6 @@
+Function to take name and age and print their values:
+
+def print_name_age(name, age):
+    print(f"Name: {name}, Age: {age}")
+
+print_name_age("Alice", 30)  # Output: Name: Alice, Age: 30
