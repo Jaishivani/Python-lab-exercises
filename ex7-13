@@ -1,0 +1,22 @@
+Recursive function count_departments():
+
+def count_departments(department_dict):
+    count = 0
+    for sub_department in department_dict.values():
+        count += 1
+        if isinstance(sub_department, dict):
+            count += count_departments(sub_department)
+    return count
+
+org_chart = {
+    'HR': {},
+    'IT': {
+        'Development': {},
+        'QA': {}
+    },
+    'Finance': {
+        'Accounting': {},
+        'Payroll': {}
+    }
+}
+print(count_departments(org_chart))  # Output: 6
