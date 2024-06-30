@@ -1,0 +1,23 @@
+Currency Conversion Module and Usage
+
+currency_conversion.py:
+# Module: currency_conversion.py
+def usd_to_eur(usd, rate=0.85):
+    return usd * rate
+
+def eur_to_usd(eur, rate=1.18):
+    return eur * rate
+
+use_currency_conversion.py:
+# Program: use_currency_conversion.py
+import currency_conversion as cc
+
+usd = 100
+eur = 85
+
+print(f"${usd} to Euros: €{cc.usd_to_eur(usd):.2f}")
+print(f"€{eur} to USD: ${cc.eur_to_usd(eur):.2f}")
+
+# Expected Output:
+# $100 to Euros: €85.00
+# €85 to USD: $100.30
