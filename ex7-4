@@ -1,0 +1,8 @@
+Function to return a list with distinct elements:
+
+def unique_list(lst):
+    return list(set(lst))
+
+sample_list = [1, 2, 3, 3, 3, 3, 4, 5]
+print(unique_list(sample_list))  # Output: [1, 2, 3, 4, 5]
+
