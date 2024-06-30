@@ -1,0 +1,10 @@
+Pyramid of Stars
+n = 4
+for i in range(n):
+    print(" " * (n - i - 1) + "*" * (2 * i + 1))
+
+# Expected Output:
+#    *
+#   ***
+#  *****
+# *******
