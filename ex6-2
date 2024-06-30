@@ -1,0 +1,9 @@
+Print Each Fruit
+fruits = ["Apple", "Banana", "Cherry"]
+for fruit in fruits:
+    print(fruit)
+
+# Expected Output:
+# Apple
+# Banana
+# Cherry
