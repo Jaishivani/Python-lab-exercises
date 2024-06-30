@@ -1,0 +1,23 @@
+Temperature Conversion Module and Usage
+
+# Module: temperature_conversion.py
+def celsius_to_fahrenheit(celsius):
+    return (celsius * 9/5) + 32
+
+def fahrenheit_to_celsius(fahrenheit):
+    return (fahrenheit - 32) * 5/9
+
+#use_temperature_conversion.py:
+
+# Program: use_temperature_conversion.py
+import temperature_conversion as tc
+
+celsius = 25
+fahrenheit = 77
+
+print(f"{celsius}°C to Fahrenheit: {tc.celsius_to_fahrenheit(celsius)}°F")
+print(f"{fahrenheit}°F to Celsius: {tc.fahrenheit_to_celsius(fahrenheit)}°C")
+
+# Expected Output:
+# 25°C to Fahrenheit: 77.0°F
+# 77°F to Celsius: 25.0°C
