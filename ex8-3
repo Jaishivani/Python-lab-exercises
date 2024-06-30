@@ -1,0 +1,37 @@
+Arithmetic Operations Module and Usage
+
+arithmetic_operations.py:
+# Module: arithmetic_operations.py
+def add(a, b):
+    return a + b
+
+def subtract(a, b):
+    return a - b
+
+def multiply(a, b):
+    return a * b
+
+def divide(a, b):
+    if b == 0:
+        raise ValueError("Cannot divide by zero.")
+    return a / b
+
+use_arithmetic_operations.py:
+# Program: use_arithmetic_operations.py
+import arithmetic_operations as ao
+
+a, b = 10, 5
+
+print(f"{a} + {b} = {ao.add(a, b)}")
+print(f"{a} - {b} = {ao.subtract(a, b)}")
+print(f"{a} * {b} = {ao.multiply(a, b)}")
+print(f"{a} / {b} = {ao.divide(a, b)}")
+
+# Expected Output:
+# 10 + 5 = 15
+# 10 - 5 = 5
+# 10 * 5 = 50
+# 10 / 5 = 2.0
+
+
+
