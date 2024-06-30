@@ -1,0 +1,24 @@
+Decimal and Binary Conversion Module and Usage
+
+conversion.py:
+# Module: conversion.py
+def decimal_to_binary(decimal):
+    return bin(decimal)[2:]
+
+def binary_to_decimal(binary):
+    return int(binary, 2)
+
+use_conversion.py:
+
+# Program: use_conversion.py
+import conversion
+
+decimal = 10
+binary = "1010"
+
+print(f"Decimal {decimal} to binary: {conversion.decimal_to_binary(decimal)}")
+print(f"Binary {binary} to decimal: {conversion.binary_to_decimal(binary)}")
+
+# Expected Output:
+# Decimal 10 to binary: 1010
+# Binary 1010 to decimal: 10
